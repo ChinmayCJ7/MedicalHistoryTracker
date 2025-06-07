@@ -28,7 +28,18 @@ function EditModal({ isOpen, onClose, onUpdate, record }) {
           <input name="patientName" value={formData.patientName || ""} onChange={handleChange} placeholder="Patient Name" className="w-full border p-2 rounded" />
           {/* <input name="patientId" value={formData.patientId || ""} onChange={handleChange} placeholder="Patient ID" className="w-full border p-2 rounded" /> */}
           <input type="date" name="dateOfRecord" value={formData.dateOfRecord || ""} onChange={handleChange} className="w-full border p-2 rounded" />
-          <input name="eventType" value={formData.eventType || ""} onChange={handleChange} placeholder="Event Type" className="w-full border p-2 rounded" />
+          <select
+            name="eventType"
+            value={formData.eventType || ""}
+            onChange={handleChange}
+            className="w-full border p-2 rounded"
+          >
+            <option value="">Select event type</option>
+            <option value="Illness">Illness</option>
+            <option value="Surgery">Surgery</option>
+            <option value="Allergy">Allergy</option>
+            <option value="Vaccination">Vaccination</option>
+          </select>
           <input name="hospitalName" value={formData.hospitalName || ""} onChange={handleChange} placeholder="Hospital" className="w-full border p-2 rounded" />
           <input name="doctorName" value={formData.doctorName || ""} onChange={handleChange} placeholder="Doctor" className="w-full border p-2 rounded" />
           <textarea name="description" value={formData.description || ""} onChange={handleChange} placeholder="Description" className="w-full border p-2 rounded" />
