@@ -6,7 +6,7 @@ A full-stack web application to input, store, and manage medical history records
 ## 📁 Project Structure
 
 ```
-colegeProject/
+
 ├── frontend/            # React + Vite frontend
 ├── medicalhistory/      # Spring Boot backend (Java)
 ```
